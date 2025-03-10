@@ -1,0 +1,23 @@
+{
+  "name": "my-mern-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon back-end/server.js",
+    "build": "npm install && npm install --prefix front-end/MERN-website && npm run build --prefix front-end/MERN-website",
+    "start": "NODE_ENV=production node back-end/server.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
