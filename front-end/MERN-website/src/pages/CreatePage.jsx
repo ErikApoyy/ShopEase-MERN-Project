@@ -69,11 +69,9 @@ const CreatePage = () => {
 							Add Product
 						</Button>
 
-            <Button colorScheme='red' w='full' rightIcon={<ArrowBackIcon />}>
-							<Link to={"/"}>
-                Back to homepage
-              </Link>
-						</Button>
+            <Button as={Link} to={"/"} colorScheme='red' w='full' rightIcon={<ArrowBackIcon />} >
+              Back to Homepage
+            </Button>
 
           </VStack>
         </Box>
