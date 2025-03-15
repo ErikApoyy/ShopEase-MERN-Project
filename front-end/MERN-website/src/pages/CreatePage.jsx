@@ -1,6 +1,8 @@
 import { Box, Container, Heading, useColorModeValue, VStack, Input, Button, useToast } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 import {useState} from 'react'
 import {useProductStore} from '../store/product.js'
+import { ArrowBackIcon, CheckCircleIcon } from '@chakra-ui/icons'
 
 const CreatePage = () => {
   const [newProduct, createNewProduct] = useState({
@@ -63,8 +65,14 @@ const CreatePage = () => {
             onChange={(e) => createNewProduct({...newProduct, image: e.target.value})}
           />
 
-            <Button colorScheme='blue' onClick={handleAddProduct} w='full'>
+            <Button colorScheme='blue' onClick={handleAddProduct} w='full' rightIcon={<CheckCircleIcon/>}>
 							Add Product
+						</Button>
+
+            <Button colorScheme='red' w='full' rightIcon={<ArrowBackIcon />}>
+							<Link to={"/"}>
+                Back to homepage
+              </Link>
 						</Button>
 
           </VStack>
