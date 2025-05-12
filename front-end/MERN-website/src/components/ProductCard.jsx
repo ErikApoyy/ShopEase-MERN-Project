@@ -90,7 +90,7 @@ const ProductCard = ({product}) => {
         <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
             <ModalContent>
-                <ModalHeader>test123</ModalHeader>
+                <ModalHeader>Update Product Detail</ModalHeader>
                 <ModalCloseButton />
                     <ModalBody>
 						<VStack spacing={8}>
